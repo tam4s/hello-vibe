@@ -2,7 +2,7 @@ FROM ubuntu as builder
 
 RUN apt-get -y update
 RUN apt-get -y upgrade
-RUN apt-get -y install curl wget xz-utils gcc git libz-dev libevent-dev libssl-dev
+RUN apt-get -y install curl wget xz-utils gcc git libz-dev libevent-dev libssl-dev libcurl4-openssl-dev
 
 WORKDIR /tmp/ldc
 
