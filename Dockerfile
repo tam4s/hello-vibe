@@ -30,8 +30,8 @@ RUN for package_name in \
 	version="$(echo $package_name | grep : |cut -d: -f2)"; \
 	version="${version:-*}"; \
 		printf "/++dub.sdl: name\"foo\"\ndependency\"${package}\" version=\"${version}\"+/\n void main() {}" > foo.d; \
-		dub fetch "${package}" --cache=system --version="${version}"; \
-		dub build -b release --cache=system --single foo.d; \
+		dub fetch "${package}" --version="${version}"; \
+		dub build -b release --single foo.d; \
 		rm -f foo*; \
 		rm -rf .dub/build; \
 	done
@@ -39,7 +39,7 @@ RUN for package_name in \
 ADD source ./source
 ADD dub.json ./
 
-RUN dub build -b release --cache=local
+RUN dub build -b release
 
 FROM alpine
 WORKDIR /opt/app
