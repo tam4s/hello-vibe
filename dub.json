@@ -1,0 +1,13 @@
+{
+	"name": "hello-vibe",
+	"authors": [
+		"Tamas"
+	],
+	"dependencies": {
+		"vibe-d": "~>0.8.2"
+	},
+	"description": "A simple vibe.d server application packaged into a Docker container.",
+	"copyright": "Copyright © 2018, Tamas",
+	"license": "BSL-1.0",
+	"dflags-ldc": ["-static"]
+}

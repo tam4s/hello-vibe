@@ -1,0 +1,12 @@
+.dub
+dub.selections.json
+hello-vibe
+*.exe
+*.o
+*.obj
+*.lst
+*.a
+*.dylib
+*.dll
+*.a
+*.lib
